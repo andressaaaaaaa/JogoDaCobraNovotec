@@ -1,5 +1,6 @@
 const tamanho = 10;
 let cobrinha;
+let comida;
 
 function setup() {
   createCanvas(400,400);
@@ -11,7 +12,9 @@ function draw() {
   background(51);
   cobrinha.show();
   cobrinha.update();
-  posicaoComida();
+ if(cobrinha.come(comida)){
+   posicaoComida();
+ }
   fill(255,0,100);
   rect(comida.x,comida.y,tamanho,tamanho);
 }
